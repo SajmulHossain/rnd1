@@ -40,11 +40,32 @@ header nav ul li a {
     font-size: 18px;
 }
 
-#hero {
-    height: 100vh;
-    overflow: hidden;
-}
-
 .carousel-item img {
     object-fit: cover;
+}
+
+.explore {
+    background-color: rgba(0, 0, 0, 0.468);
+    padding: 20px 0;
+    width: 100%;
+    position: absolute;
+    bottom: 100px;
+    text-transform: uppercase;
+}
+
+.explore .container {
+    display: flex;
+    gap: 200px;
+}
+
+.explore a {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.explore .nav {
+    display: flex;
+    gap: 40px;
 }
