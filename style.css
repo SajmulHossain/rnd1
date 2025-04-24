@@ -201,20 +201,18 @@ header nav ul li a {
 
 .carousel-caption {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 3rem;
-    text-align: left;
-    width: auto;
-    max-width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
     opacity: 0;
-    transform: translateY(100px);
     transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .carousel-item.active .carousel-caption {
     opacity: 1;
-    transform: translateY(0);
 }
 
 .title-wrapper {
@@ -357,4 +355,32 @@ header nav ul li a {
     .slide-image {
         height: 100vh !important;
     }
+}
+
+.explore-btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 12px 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+.carousel-item.active .explore-btn {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+.explore-btn:hover {
+    background-color: white;
+    color: #000;
+    transform: translateY(-3px);
 }
