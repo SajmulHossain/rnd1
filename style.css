@@ -224,7 +224,6 @@ header nav ul li a {
 
 .dril {
     display: flex;
-    margin-top: 80px;
     gap: 40px;
 }
 
@@ -259,4 +258,29 @@ header nav ul li a {
 .btn-holder button span {
     font-weight: bold;
     font-size: 24px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-img {
+    width: 25%;
+}
+
+.footer-img img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.vertical-line {
+    background-color: #0000006c;
+    height: 300px;
+    width: 4px;
+}
+
+.container {
+    margin-top: 80px;
 }
