@@ -1,11 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
     --main-color: #da5326;
 }
 
+* {
+    font-family: "Roboto", sans-serif;
+    /* font-family: "Noto Sans", sans-serif; */
+}
 
 header {
-    background-color: rgba(0, 0, 0, 0.438);
-    position: absolute;
+    background-color: rgba(255, 255, 255, 0.667);
+    position: fixed;
     z-index: 50;
     top: 0;
     left: 0;
@@ -18,10 +24,12 @@ header .container {
     padding: 16px 0;
     align-items: center;
     position: relative;
+    margin-top: 0px;
 }
 
 header nav ul {
     display: flex;
+    margin: auto;
     list-style: none;
     gap: 20px;
 }
@@ -30,8 +38,14 @@ header nav ul {
     height: 50px;
 }
 
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 header nav ul li a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 20px;
     font-weight: 600;

@@ -139,6 +139,7 @@
     .nav-menu ul li a {
         display: block;
         padding: 15px 0;
+        color: white;
         position: relative;
         transition: all 0.3s ease;
     }
