@@ -366,15 +366,17 @@ header nav ul li a:hover::after {
     display: flex;
     gap: 40px;
     padding: 60px 0;
+    justify-content: space-between;
 }
+
 
 .dril-1 {
     width: 50%;
 }
 
 .dril-1 img {
-    width: 100%;
-    height: auto;
+    width: 80%;
+    height:fit-content;
     object-fit: cover;
     border-radius: 20px;
 }
@@ -406,7 +408,7 @@ header nav ul li a:hover::after {
 
 .dril-2 h2 {
     font-family: var(--heading-font);
-    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-size: 2rem;
     font-weight: 700;
     line-height: 1.2;
     border-left: 4px solid var(--main-color);
@@ -426,9 +428,9 @@ header nav ul li a:hover::after {
     color: var(--main-color);
 }
 
-.btn-holder {
+/* .btn-holder {
     margin-top: 30px;
-}
+} */
 
 .btn-holder button {
     display: inline-flex;
@@ -502,6 +504,10 @@ header nav ul li a:hover::after {
     width: 65%;
     border-radius: 20px;
     overflow: hidden;
+}
+
+.section-2-img img {
+    object-fit: cover;
 }
 
 footer {
