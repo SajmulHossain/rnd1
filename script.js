@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const body = document.body;
+    const header = document.querySelector('header');
 
     menuToggle.addEventListener('click', function() {
         navMenu.classList.toggle('active');
@@ -20,5 +21,14 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function() {
             navMenu.classList.remove('active');
         });
+    });
+
+    // Change header color on scroll
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 10) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
     });
 });
