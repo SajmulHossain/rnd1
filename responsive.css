@@ -231,6 +231,11 @@
     flex-direction: column;
     gap: 50px;
   }
+
+    .news .container {
+      display: flex;
+      flex-direction: column;
+    }
 }
 
 @media (max-width: 576px) {
@@ -267,5 +272,45 @@
   .partners-logos {
     flex-direction: column;
     gap: 20px;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .dril {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .dril-1,
+  .dril-2 {
+    width: 100%;
+  }
+
+  .dril-2 {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .dril-content {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .dril {
+    padding: 40px 0;
+  }
+
+  .leaves-icon {
+    width: 30px;
+  }
+
+  .dril-2 h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  .dril-2 p {
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
   }
 }

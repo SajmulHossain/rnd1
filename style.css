@@ -465,45 +465,6 @@ header nav ul li a:hover::after {
     color: #333;
 }
 
-@media (max-width: 992px) {
-    .dril {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .dril-1,
-    .dril-2 {
-        width: 100%;
-    }
-
-    .dril-2 {
-        border-right: none;
-        padding-right: 0;
-    }
-
-    .dril-content {
-        gap: 15px;
-    }
-}
-
-@media (max-width: 576px) {
-    .dril {
-        padding: 40px 0;
-    }
-
-    .leaves-icon {
-        width: 30px;
-    }
-
-    .dril-2 h2 {
-        font-size: clamp(1.5rem, 3vw, 2rem);
-    }
-
-    .dril-2 p {
-        font-size: clamp(0.9rem, 1.2vw, 1.1rem);
-    }
-}
-
 .section-2-img {
     width: 65%;
     border-radius: 20px;
@@ -572,6 +533,72 @@ header nav ul li a:hover::after {
     margin: 0 10px;
 }
 
+.news .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.article-img-container {
+    position: relative;
+}
+
+.article-img-container img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.article-img-container p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--main-color);
+    padding: 6px 12px;
+    color: white;
+    font-weight: 600;
+}
+
+.article-container {
+    padding: 20px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.395);
+}
+
+.article-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 14px;
+}
+
+.article-header i {
+    color: var(--main-color);
+}
+
+.article-header div {
+    width: 20px;
+    height: 2px;
+    background-color: black;
+}
+
+.article-container h3 {
+    margin: 15px 0 10px;
+}
+
+.article-container p {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.649);
+    margin-bottom: 10px;
+}
+
+.article-container button {
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+}
+
+.article-container button i {
+    color: var(--main-color);
+}
 
 .container {
     margin-top: 80px;
