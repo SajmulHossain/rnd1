@@ -17,6 +17,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="responsive.css" />
   </head>
@@ -142,16 +143,16 @@
 
       <section class="container">
         <div class="dril">
-          <div class="dril-1">
+          <div class="dril-1" data-aos="fade-right">
             <img src="assets/drel.png" alt="drel" />
           </div>
-          <div class="dril-2">
+          <div class="dril-2" data-aos="fade-left">
             <div class="dril-content">
               <div class="leaves-icon">
                 <img src="assets/leaves.png" alt="leaves" />
               </div>
               <h2>Edison Real Estate Ltd.</h2>
-              <p style="margin-bottom: 10px;">
+              <p style="margin-bottom: 10px">
                 Edison Real Estate Ltd.Edison Real Estat is a leading name in
                 Bangladesh's real estate sector, renowned for offering premium
                 land properties that are ideal for modern and peaceful living.
@@ -161,7 +162,7 @@
                 setting new benchmarks in the land development industry.
               </p>
             </div>
-            <div class="btn-holder">
+            <div class="btn-holder" data-aos="fade-up" data-aos-delay="1">
               <button>
                 <img src="assets/leaves.png" alt="leaves" />
                 <span>About us</span>
@@ -173,21 +174,23 @@
 
       <section class="container">
         <div class="dril">
-          <div
-          class="dril-seciton-2"
-          >
+          <div class="dril-seciton-2" data-aos="fade-right">
             <div></div>
-            <div style="margin-bottom: 10px;">
-              <img style="width: 100%;" src="assets/edison-logo.png" alt="edison logo" />
+            <div style="margin-bottom: 10px">
+              <img
+                style="width: 100%"
+                src="assets/edison-logo.png"
+                alt="edison logo"
+              />
             </div>
-            <div class="btn-holder">
+            <div class="btn-holder" data-aos="fade-up" data-aos-delay="1">
               <button>
                 <img src="assets/leaves.png" alt="leaves" />
                 <span>See more</span>
               </button>
             </div>
           </div>
-          <div class="section-2-img">
+          <div class="section-2-img" data-aos="fade-left">
             <img
               src="assets/section-two-img.png"
               style="width: 100%"
@@ -198,8 +201,8 @@
       </section>
 
       <section class="news">
+        <h2>Latest News & articles</h2>
         <div class="container">
-          <h2>Latest News & articles</h2>
 
           <!-- * first article -->
           <div class="article">
@@ -498,5 +501,9 @@
       crossorigin="anonymous"
     ></script>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

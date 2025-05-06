@@ -562,9 +562,12 @@ header nav ul li a:hover::after {
   gap: 20px;
 }
 
+.news h2 {
+    text-align: center;
+}
+
 .article {
-  border-radius: 10px;
-  overflow: hidden;
+  width: 100%;
 }
 
 .article-img-container {
@@ -573,7 +576,10 @@ header nav ul li a:hover::after {
 
 .article-img-container img {
   width: 100%;
+  height: 250px;
   object-fit: cover;
+  border-start-start-radius: 20px;
+  border-start-end-radius: 4px;
 }
 
 .article-img-container p {
@@ -589,6 +595,8 @@ header nav ul li a:hover::after {
 .article-container {
   padding: 20px;
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.395);
+  border-end-end-radius: 20px;
+  border-end-start-radius: 5px;
 }
 
 .article-header {
