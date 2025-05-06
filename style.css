@@ -615,10 +615,6 @@ header nav ul li a:hover::after {
     text-align: center;
 }
 
-.partners-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
 .partners-section h2 {
     font-family: var(--heading-font, 'Roboto', sans-serif);
