@@ -218,6 +218,10 @@
   .vertical-line {
     display: none;
   }
+
+  .contact {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 576px) {

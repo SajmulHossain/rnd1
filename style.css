@@ -18,6 +18,10 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
+p {
+    margin-bottom: 0;
+}
+
 header {
     background-color: rgba(255, 255, 255, 0.722);
     position: fixed;
@@ -644,11 +648,12 @@ header nav ul li a:hover::after {
 
 footer {
     background-color: #1e2027;
-    padding-top: 60px;
+    padding-top: 40px;
 }
 
-.Contact {
+.contact {
     display: flex;
+    margin-bottom: 40px;
 }
 
 .contact-1 {
@@ -659,11 +664,18 @@ footer {
     align-items: center;
     color: white;
     gap: 50px;
+    padding: 20px 0;
 }
 
 .contact-2 {
     background-color: #282b35;
-    width: 100%;
+    width: 100%;    
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 10px;
 }
 
 .contact-1 div i {
@@ -681,13 +693,6 @@ footer {
     text-decoration: underline;
 }
 
-.contact-2 {
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-}
 
 .contact-2 div i {
     font-size: 50px;
@@ -701,4 +706,85 @@ footer {
 
 .contact-2 div p {
     color: var(--main-color);
+}
+
+.contact-info {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contact-info p i {
+    color: var(--main-color);
+    font-size: 24px;
+}
+
+.footer-links {
+    color: rgb(198, 188, 188);
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.introduction-links {
+    width: 25%;
+}
+
+.common-links h3 {
+    margin-bottom: 30px;
+}
+
+.introduction-links .logo img {
+    height: 35px;
+}
+
+.common-links div ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.common-links div ul li a {
+    text-decoration: none;
+    color: rgb(161, 158, 158);
+    font-size: 14px;
+}
+
+.common-links form {
+    background-color: #282b35;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.footer-input {
+    padding: 8px;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid rgb(146, 140, 140);
+    outline: none;
+}
+
+.footer-btn {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+    transform: translate(0, -15%);
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-weight: 600;
+}
+
+.footer-links i {
+    color: var(--main-color);
+}
+
+.copyright {
+    color: white;
+    text-align: center;
+    padding: 20px 0;
 }
