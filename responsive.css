@@ -222,6 +222,15 @@
   .contact {
     flex-direction: column;
   }
+
+    .introduction-links {
+      width: 100%;
+    }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 50px;
+  }
 }
 
 @media (max-width: 576px) {
