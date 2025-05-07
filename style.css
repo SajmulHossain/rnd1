@@ -13,10 +13,6 @@
   font-family: var(--body-font);
 }
 
-.aos-init {
-  overflow: hidden;
-}
-
 h1,
 h2,
 h3,
@@ -43,14 +39,14 @@ header {
 }
 
 header.scrolled {
-  background-color: var(--main-color);
+  background-color: white;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 header.scrolled .hotline-no {
   background-color: var(--main-color);
-  color: black;
+  color: white;
 }
 
 header .container {
@@ -80,7 +76,7 @@ header nav ul {
 }
 
 header nav ul li a {
-  color: var(--main-color);
+  color: white;
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
@@ -90,7 +86,7 @@ header nav ul li a {
 }
 
 header nav ul li a.scrolled {
-  color: rgba(0, 0, 0, 0.615);
+  color: var(--main-color);
 }
 header nav ul li a.scrolled:hover {
   color: #000000;
@@ -389,6 +385,7 @@ header nav ul li a:hover {
   gap: 40px;
   padding: 60px 0;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .dril-1 {
@@ -407,7 +404,7 @@ header nav ul li a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-right: 6px solid black;
+  /* border-right: 6px solid black; */
   padding-right: 16px;
 }
 
@@ -424,16 +421,15 @@ header nav ul li a:hover {
   left: 0;
   top: 0;
   z-index: 99;
-  width: 4px;
+  width: 6px;
   height: 100%;
   background-color: black;
   transform-origin: right;
 }
 
 .dril-2[data-scroll="in"]::before {
-  left: 100%;
+  left: 99%;
   transition: 3s;
-  opacity: 0;
 }
 
 .dril-2::after {
