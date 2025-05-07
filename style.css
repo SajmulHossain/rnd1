@@ -48,6 +48,11 @@ header.scrolled {
   transition: background-color 0.3s, box-shadow 0.3s;
 }
 
+header.scrolled .hotline-no {
+  background-color: orange;
+  color: black;
+}
+
 header .container {
   margin-top: 0;
   display: flex;
@@ -667,22 +672,31 @@ header nav ul li a:hover {
   color: var(--main-color);
 }
 
-.container {
+section {
   margin-top: 80px;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.heading-container {
+  width: fit-content;
+}
+
+.heading .heading-container h2 {
+  border-left: 4px solid var(--main-color);
+  padding-left: 10px;
+  margin-top: 8px;
+  font-size: 2rem;
 }
 
 .partners-section {
   background: #fafbfc;
-  padding: 60px 0 40px 0;
+  padding: 0 0 40px 0;
   text-align: center;
-}
-
-.partners-section h2 {
-  font-family: var(--heading-font, "Roboto", sans-serif);
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: #333;
 }
 
 .partners-section p {
@@ -693,37 +707,20 @@ header nav ul li a:hover {
 
 .partners-logos {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 50px;
+  gap: 300px;
 }
 
 .partner-logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   opacity: 0.7;
   transition: opacity 0.3s, transform 0.3s;
+  display: inline-block;
 }
 
 .partner-logo img {
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 250px;
   object-fit: contain;
   margin-bottom: 10px;
-}
-
-.partner-logo .partner-name {
-  font-weight: 700;
-  color: #888;
-  letter-spacing: 1px;
-  font-size: 1rem;
-}
-
-.partner-logo .partner-tagline {
-  font-size: 0.85rem;
-  color: #bbb;
-  margin-top: 2px;
 }
 
 .partner-logo:hover {

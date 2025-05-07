@@ -20,6 +20,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="slide.css" />
   </head>
   <body>
     <header>
@@ -44,14 +45,14 @@
           </ul>
         </nav>
 
-        <p class="hotline-no">16760</p>
+        <p class="hotline-no">+99 0129321309</p>
       </div>
     </header>
 
     <main>
       <!-- slider seciton -->
 
-      <section class="hero-slider">
+      <section class="hero-slider" style="margin-top: 0">
         <div
           id="carouselExampleInterval"
           class="carousel slide"
@@ -201,9 +202,15 @@
       </section>
 
       <section class="news">
-        <h2>Latest News & articles</h2>
+        <div class="heading">
+          <div class="heading-container">
+            <div class="leaves-icon">
+              <img src="assets/leaves.png" alt="leaves" />
+            </div>
+            <h2>Latest News & articles</h2>
+          </div>
+        </div>
         <div class="container">
-
           <!-- * first article -->
           <div class="article">
             <div class="article-img-container">
@@ -317,11 +324,99 @@
         </div>
       </section>
 
+      <section class="client-container">
+        <div class="client">
+          <div class="container">
+            <div class="client-content">
+              <div class="client-img" data-aos="fade-down" data-aos-delay=".5">
+                <img src="assets/img1.png" alt="img" />
+              </div>
+              <div class="vertical-line"></div>
+              <div class="client-img" data-aos="fade-down" data-aos-delay="1">
+                <img src="assets/img2.png" alt="img" />
+              </div>
+              <div class="vertical-line"></div>
+              <div class="client-img" data-aos="fade-down" data-aos-delay="1.5">
+                <img src="assets/rajuk.png" alt="rajuk" />
+              </div>
+              <div class="vertical-line"></div>
+              <div class="client-img" data-aos="fade-down" data-aos-delay="2">
+                <img src="assets/land.png" alt="land" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="partners-section">
         <div class="container">
-          <h2>Our Partners</h2>
+          <div class="heading" style="margin-bottom: 0">
+            <div class="heading-container">
+              <div class="leaves-icon">
+                <img src="assets/leaves.png" alt="leaves" />
+              </div>
+              <h2>Our Partners</h2>
+            </div>
+          </div>
           <p>We only work with the best companies around the globe</p>
-          <div class="partners-logos">
+          
+          <!-- *main slider -->
+          <div class="slider container">
+            <div class="slide-track">
+              <div class="slide">
+                <img
+                  src="assets/Approved by Following Agencies/fire.png"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="assets/Approved by Following Agencies/dtca.jpeg"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="assets/Approved by Following Agencies/rajuk.jpg"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="assets/Approved by Following Agencies/titas.jpeg"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="assets/Approved by Following Agencies/wasa.png"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="assets/Approved by Following Agencies/fire.png"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="assets/Approved by Following Agencies/dtca.jpeg"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="assets/Approved by Following Agencies/rajuk.jpg"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="assets/Approved by Following Agencies/titas.jpeg"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="assets/Approved by Following Agencies/wasa.png"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- <div>
+            <div class="partners-logos">
             <div class="partner-logo">
               <img
                 src="assets/Approved by Following Agencies/fire.png"
@@ -350,30 +445,7 @@
               />
             </div>
           </div>
-        </div>
-      </section>
-
-      <section class="client-container">
-        <div class="client">
-          <div class="container">
-            <div class="client-content">
-              <div class="client-img" data-aos="fade-down" data-aos-delay=".5">
-                <img src="assets/img1.png" alt="img" />
-              </div>
-              <div class="vertical-line"></div>
-              <div class="client-img" data-aos="fade-down" data-aos-delay="1">
-                <img src="assets/img2.png" alt="img" />
-              </div>
-              <div class="vertical-line"></div>
-              <div class="client-img" data-aos="fade-down" data-aos-delay="1.5">
-                <img src="assets/rajuk.png" alt="rajuk" />
-              </div>
-              <div class="vertical-line"></div>
-              <div class="client-img" data-aos="fade-down" data-aos-delay="2">
-                <img src="assets/land.png" alt="land" />
-              </div>
-            </div>
-          </div>
+          </div> -->
         </div>
       </section>
     </main>
@@ -508,8 +580,8 @@
     <script src="scroll-out.js"></script>
     <script>
       ScrollOut({
-        targets: '.dril-2'
-      })
+        targets: ".dril-2",
+      });
     </script>
   </body>
 </html>
