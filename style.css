@@ -106,13 +106,13 @@ header nav ul li a:hover {
 }
 
 header nav ul li a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 4px;
   bottom: -19px;
   left: 0;
-  transition: .5s;
+  transition: 0.5s;
   background-color: white;
 }
 
@@ -123,7 +123,6 @@ header nav ul li a:hover::after {
 header.scrolled nav ul li a:hover::after {
   background-color: black;
 }
-
 
 .hotline-no {
   border: 2px solid var(--secondary-color);
@@ -305,25 +304,32 @@ header.scrolled nav ul li a:hover::after {
 
 /* *for typewriter */
 .typewriter h1 {
-  overflow: hidden; 
-  border-right: .15em solid var(--secondary-color);
-  white-space: nowrap; 
+  overflow: hidden;
+  border-right: 0.15em solid var(--secondary-color);
+  white-space: nowrap;
   margin: 0 auto;
-  animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
 /* The typing effect */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: var(--secondary-color); }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--secondary-color);
+  }
 }
 
 .title-wrapper {
@@ -443,7 +449,7 @@ header.scrolled nav ul li a:hover::after {
 }
 
 .dril-2::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -460,7 +466,7 @@ header.scrolled nav ul li a:hover::after {
 }
 
 .dril-2::after {
-  content: '';
+  content: "";
   position: absolute;
   background-color: white;
   width: 100%;
@@ -626,7 +632,7 @@ header.scrolled nav ul li a:hover::after {
 }
 
 .news h2 {
-    text-align: center;
+  text-align: center;
 }
 
 .article {
@@ -753,6 +759,34 @@ section {
 .partner-logo:hover {
   opacity: 1;
   transform: translateY(-5px) scale(1.05);
+}
+
+.swiper {
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
+.swiper-slide {
+  background: white;
+  border-radius: 20px;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.swiper-slide-active {
+  transform: scale(1.10) !important;
+  z-index: 10;
 }
 
 /* *footer section */

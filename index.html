@@ -18,6 +18,11 @@
       referrerpolicy="no-referrer"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Swiper CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="responsive.css" />
     <link rel="stylesheet" href="slide.css" />
@@ -147,7 +152,7 @@
         </div>
       </section>
 
-      <section style="border-bottom: 6px solid var(--secondary-color);">
+      <section style="border-bottom: 6px solid var(--secondary-color)">
         <div class="dril container">
           <div class="dril-1" data-aos="fade-right">
             <img src="assets/drel.png" alt="drel" />
@@ -369,37 +374,37 @@
           <p>We only work with the best companies around the globe</p>
 
           <!-- *main slider -->
-          <div class="slider container">
-            <div class="slide-track">
-              <div class="slide">
-                <img src="assets/Approved by Following Agencies/fire.png" />
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="assets/Approved by Following Agencies/dtca.jpeg"
+                  alt=""
+                />
               </div>
-              <div class="slide">
-                <img src="assets/Approved by Following Agencies/dtca.jpeg" />
+              <div class="swiper-slide">
+                <img
+                  src="assets/Approved by Following Agencies/fire.png"
+                  alt=""
+                />
               </div>
-              <div class="slide">
-                <img src="assets/Approved by Following Agencies/rajuk.jpg" />
+              <div class="swiper-slide">
+                <img
+                  src="assets/Approved by Following Agencies/police.jpg"
+                  alt=""
+                />
               </div>
-              <div class="slide">
-                <img src="assets/Approved by Following Agencies/titas.jpeg" />
+              <div class="swiper-slide">
+                <img
+                  src="assets/Approved by Following Agencies/rajuk.jpg"
+                  alt=""
+                />
               </div>
-              <div class="slide">
-                <img src="assets/Approved by Following Agencies/wasa.png" />
-              </div>
-              <div class="slide">
-                <img src="assets/Approved by Following Agencies/fire.png" />
-              </div>
-              <div class="slide">
-                <img src="assets/Approved by Following Agencies/dtca.jpeg" />
-              </div>
-              <div class="slide">
-                <img src="assets/Approved by Following Agencies/rajuk.jpg" />
-              </div>
-              <div class="slide">
-                <img src="assets/Approved by Following Agencies/titas.jpeg" />
-              </div>
-              <div class="slide">
-                <img src="assets/Approved by Following Agencies/wasa.png" />
+              <div class="swiper-slide">
+                <img
+                  src="assets/Approved by Following Agencies/ref.png"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -539,6 +544,44 @@
       ScrollOut({
         targets: ".dril-2",
       });
+    </script>
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      const swiper = new Swiper(".swiper", {
+        slidesPerView: 5,
+        spaceBetween: 10,
+        centeredSlides: true,
+        loop: true,
+        grabCursor: true,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
+        on: {
+          slideChangeTransitionEnd: function () {
+            setTimeout(() => {
+              document.querySelectorAll(".swiper-slide").forEach((slide) => {
+                slide.classList.remove("centered");
+              });
+              const activeSlides = document.querySelectorAll(
+                ".swiper-slide-visible"
+              );
+              const middleIndex = Math.floor(activeSlides.length / 2);
+              if (activeSlides[middleIndex]) {
+                activeSlides[middleIndex].classList.add("centered");
+              }
+            }, 0);
+          },
+        },
+      });
+
+      setTimeout(() => {
+        const visible = document.querySelectorAll(".swiper-slide-visible");
+        const mid = Math.floor(visible.length / 2);
+        if (visible[mid]) visible[mid].classList.add("centered");
+      }, 500);
     </script>
   </body>
 </html>
