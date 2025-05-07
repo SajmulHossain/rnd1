@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const navMenu = document.querySelector('.nav-menu');
     const body = document.body;
     const header = document.querySelector('header');
+    const navs = document.querySelectorAll("header nav ul li a");
+
 
     menuToggle.addEventListener('click', function() {
         navMenu.classList.toggle('active');
@@ -27,8 +29,14 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         if (window.scrollY > 10) {
             header.classList.add('scrolled');
+            navs.forEach(nav => {
+                nav.classList.add('scrolled');
+            })
         } else {
             header.classList.remove('scrolled');
+            navs.forEach((nav) => {
+              nav.classList.remove("scrolled");
+            });
         }
     });
 });

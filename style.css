@@ -28,7 +28,7 @@ p {
 }
 
 header {
-  background-color: rgba(255, 255, 255, 0.722);
+  background-color: rgba(0, 0, 0, 0.603);
   position: fixed;
   z-index: 50;
   top: 0;
@@ -71,7 +71,7 @@ header nav ul {
 }
 
 header nav ul li a {
-  color: #333;
+  color: orange;
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
@@ -80,24 +80,18 @@ header nav ul li a {
   transition: all 0.3s ease;
 }
 
-header nav ul li a::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--main-color);
-  transition: width 0.3s ease;
+header nav ul li a.scrolled {
+  color: rgba(0, 0, 0, 0.615);
+}
+header nav ul li a.scrolled:hover {
+  color: #000000;
+  transform: scale(1.05);
 }
 
 header nav ul li a:hover {
   color: var(--main-color);
 }
 
-header nav ul li a:hover::after {
-  width: 100%;
-}
 
 .hotline-no {
   border: 2px solid var(--main-color);
@@ -407,6 +401,38 @@ header nav ul li a:hover::after {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  position: relative;
+}
+
+.dril-2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  width: 4px;
+  height: 100%;
+  background-color: black;
+  transform-origin: right;
+}
+
+.dril-2[data-scroll="in"]::before {
+  left: 100%;
+  transition: 3s;
+}
+
+.dril-2::after {
+  content: '';
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
+.dril-2[data-scroll="in"]::after {
+  width: 0%;
+  right: 0;
+  transition: 3s;
 }
 
 .dril-seciton-2 {
