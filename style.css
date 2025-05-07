@@ -13,6 +13,10 @@
   font-family: var(--body-font);
 }
 
+.aos-init {
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -419,6 +423,7 @@ header nav ul li a:hover {
 .dril-2[data-scroll="in"]::before {
   left: 100%;
   transition: 3s;
+  opacity: 0;
 }
 
 .dril-2::after {
