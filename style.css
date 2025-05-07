@@ -49,6 +49,10 @@ header.scrolled .hotline-no {
   color: white;
 }
 
+.scrolled .logo img {
+  filter: invert();
+}
+
 header .container {
   margin-top: 0;
   display: flex;

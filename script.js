@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Close menu when clicking on a link
     const navLinks = document.querySelectorAll('.nav-menu ul li a');
+    const bar = document.querySelector(".fa-bars");
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
             navMenu.classList.remove('active');
@@ -29,11 +30,13 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         if (window.scrollY > 10) {
             header.classList.add('scrolled');
+            bar.classList.remove('text-white')
             navs.forEach(nav => {
                 nav.classList.add('scrolled');
             })
         } else {
             header.classList.remove('scrolled');
+            bar.classList.add('text-white')
             navs.forEach((nav) => {
               nav.classList.remove("scrolled");
             });
