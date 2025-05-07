@@ -40,3 +40,28 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+// *for typewriter
+
+
+var titles = document.querySelectorAll(".slide-title");
+
+titles.forEach((title, idx) => {
+    var typewriter = new Typewriter(title, {
+      loop: true,
+      delay: 75,
+    });
+    
+    typewriter
+      .pauseFor(0)
+      .typeString(
+        idx === 1
+          ? "Welcome to our city"
+          : idx === 2
+          ? "Peaceful Country Living"
+          : "Modern Living Spaces"
+      )
+      .pauseFor(3000)
+      .start();
+})
