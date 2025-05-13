@@ -46,7 +46,7 @@ header.scrolled {
 }
 
 header.scrolled .hotline-no {
-  background-color: var(--main-color);
+  background-color: var(--secondary-color);
   border-color: transparent;
   color: white;
 }
@@ -93,7 +93,7 @@ header nav ul li a {
 }
 
 header nav ul li a.scrolled {
-  color: var(--main-color);
+  color: var(--secondary-color);
 }
 header nav ul li a.scrolled:hover {
   color: #000000;
@@ -125,11 +125,11 @@ header.scrolled nav ul li a:hover::after {
 }
 
 .hotline-no {
-  border: 2px solid var(--secondary-color);
+  border: 2px solid white;
   border-radius: 30px;
   display: flex;
   align-items: center;
-  color: var(--secondary-color);
+  color: white;
   padding: 8px 20px;
   font-size: 18px;
   font-weight: 600;
@@ -437,27 +437,37 @@ header.scrolled nav ul li a:hover::after {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* border-right: 6px solid black; */
   padding-right: 16px;
+  position: relative;
 }
 
 .dril-content {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.section-2-img {
   position: relative;
 }
 
-.dril-2::before {
+
+.dril-2::before, .section-2-img::before {
   content: "";
   position: absolute;
-  left: 0;
   top: 0;
   z-index: 99;
   width: 6px;
   height: 100%;
   background-color: var(--secondary-color);
-  transform-origin: right;
+}
+
+.dril-2::before {
+  left: 0;
+}
+
+.section-2-img::before {
+  right: 0;
 }
 
 .dril-2[data-scroll="in"]::before {
@@ -465,7 +475,12 @@ header.scrolled nav ul li a:hover::after {
   transition: 3s;
 }
 
-.dril-2::after {
+.section-2-img[data-scroll="in"]::before {
+  right: 100%;
+  transition: 3s;
+}
+
+.dril-2::after, .section-2-img::after {
   content: "";
   position: absolute;
   background-color: white;
@@ -476,6 +491,11 @@ header.scrolled nav ul li a:hover::after {
 .dril-2[data-scroll="in"]::after {
   width: 0%;
   right: 0;
+  transition: 3s;
+}
+.section-2-img[data-scroll="in"]::after {
+  width: 0%;
+  left: 0;
   transition: 3s;
 }
 
