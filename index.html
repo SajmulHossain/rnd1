@@ -434,7 +434,7 @@
             </div>
 
             <p style="margin-top: 30px">
-              The world’s first and largest digital market for crypto
+              The world's first and largest digital market for crypto
               collectibles and non-fungible (NFTs). Buy
             </p>
 
@@ -551,37 +551,56 @@
     <script>
       const swiper = new Swiper(".swiper", {
         slidesPerView: 5,
-        spaceBetween: 10,
+        spaceBetween: 20,
         centeredSlides: true,
         loop: true,
         grabCursor: true,
+        speed: 800,
         autoplay: {
-          delay: 2000,
+          delay: 3000,
           disableOnInteraction: false,
         },
-        on: {
-          slideChangeTransitionEnd: function () {
-            setTimeout(() => {
-              document.querySelectorAll(".swiper-slide").forEach((slide) => {
-                slide.classList.remove("centered");
-              });
-              const activeSlides = document.querySelectorAll(
-                ".swiper-slide-visible"
-              );
-              const middleIndex = Math.floor(activeSlides.length / 2);
-              if (activeSlides[middleIndex]) {
-                activeSlides[middleIndex].classList.add("centered");
-              }
-            }, 0);
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            centeredSlides: true
           },
+          768: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+            centeredSlides: true
+          }
         },
+        on: {
+          init: function () {
+            updateCenteredSlide();
+            document.body.style.overflowX = 'hidden';
+          },
+          slideChangeTransitionEnd: function () {
+            updateCenteredSlide();
+          },
+          resize: function () {
+            updateCenteredSlide();
+          }
+        }
       });
 
-      setTimeout(() => {
-        const visible = document.querySelectorAll(".swiper-slide-visible");
-        const mid = Math.floor(visible.length / 2);
-        if (visible[mid]) visible[mid].classList.add("centered");
-      }, 500);
+      function updateCenteredSlide() {
+        document.querySelectorAll(".swiper-slide").forEach((slide) => {
+          slide.classList.remove("centered");
+        });
+        const activeSlides = document.querySelectorAll(".swiper-slide-visible");
+        const middleIndex = Math.floor(activeSlides.length / 2);
+        if (activeSlides[middleIndex]) {
+          activeSlides[middleIndex].classList.add("centered");
+        }
+      }
+
+      // Prevent horizontal scroll
+      window.addEventListener('load', function() {
+        document.body.style.overflowX = 'hidden';
+      });
     </script>
   </body>
 </html>
