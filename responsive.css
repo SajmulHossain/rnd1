@@ -311,7 +311,7 @@
 
 @media (max-width: 576px) {
   .dril {
-    padding: 40px 0;
+    padding: 40px auto;
   }
 
   .leaves-icon {

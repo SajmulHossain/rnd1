@@ -413,10 +413,14 @@ header.scrolled nav ul li a:hover::after {
   background-size: 100%, 100%;
 }
 
+.dril-2, .dril-section-2, .client-animation {
+  overflow: hidden;
+}
+
 .dril {
   display: flex;
   gap: 40px;
-  padding: 60px 0;
+  padding: 60px auto;
   justify-content: space-between;
   overflow: hidden;
 }
