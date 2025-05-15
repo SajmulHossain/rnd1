@@ -13,7 +13,7 @@
 
         // Initialize Swiper with optimized settings
         const swiper = new Swiper(".swiper", {
-          slidesPerView: 3,
+          slidesPerView: 5,
           spaceBetween: 30,
           centeredSlides: true,
           loop: true,
@@ -25,17 +25,17 @@
           },
           breakpoints: {
             320: {
-              slidesPerView: 1,
-              spaceBetween: 10,
-              centeredSlides: true
-            },
-            576: {
-              slidesPerView: 2,
+              slidesPerView: 3,
               spaceBetween: 20,
               centeredSlides: true
             },
-            992: {
+            768: {
               slidesPerView: 3,
+              spaceBetween: 30,
+              centeredSlides: true
+            },
+            992: {
+              slidesPerView: 5,
               spaceBetween: 30,
               centeredSlides: true
             }

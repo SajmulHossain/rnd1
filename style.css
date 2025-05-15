@@ -597,25 +597,19 @@ header.scrolled nav ul li a:hover::after {
   object-fit: cover;
 }
 
-.client-animation {
-  width: 100%;
-  margin-top: 60px;
-}
-
 .client {
   padding: 80px 0;
 }
 
 .client-content {
   margin-top: 32px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
+  width: 100%;
 }
 
 .client-img {
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1040,4 +1034,43 @@ footer {
   color: white;
   text-align: center;
   padding: 20px 0;
+}
+
+@media (max-width: 992px) {
+  .client-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .client-img {
+    height: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .client-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .client-img {
+    height: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .client {
+    padding: 40px 0;
+  }
+  
+  .client-content {
+    gap: 15px;
+  }
+  
+  .client-img {
+    height: 80px;
+    padding: 10px;
+  }
+  
+  .client-img img {
+    max-height: 60px;
+  }
 }
