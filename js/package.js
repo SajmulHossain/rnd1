@@ -6,9 +6,7 @@
         
         // Initialize ScrollOut with optimized settings
         ScrollOut({
-          targets: ".dril-2, .dril-section-2, .client-animation",
-          threshold: 0.1,
-          once: true
+          targets: ".dril-2, .dril-section-2, .client-animation"
         });
 
         // Initialize Swiper with optimized settings
