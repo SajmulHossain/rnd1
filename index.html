@@ -577,8 +577,8 @@
 
         // Initialize Swiper with optimized settings
         const swiper = new Swiper(".swiper", {
-          slidesPerView: 5,
-          spaceBetween: 20,
+          slidesPerView: 3,
+          spaceBetween: 30,
           centeredSlides: true,
           loop: true,
           grabCursor: true,
@@ -593,9 +593,14 @@
               spaceBetween: 10,
               centeredSlides: true
             },
-            768: {
-              slidesPerView: 5,
+            576: {
+              slidesPerView: 2,
               spaceBetween: 20,
+              centeredSlides: true
+            },
+            992: {
+              slidesPerView: 3,
+              spaceBetween: 30,
               centeredSlides: true
             }
           },

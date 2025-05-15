@@ -594,7 +594,6 @@ header.scrolled nav ul li a:hover::after {
 
 .client-animation {
   width: 100%;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   margin-top: 60px;
 }
 
@@ -793,8 +792,8 @@ section {
 }
 
 .swiper {
-  padding-top: 10px;
-  padding-bottom: 30px;
+  padding-top: 10px !important;
+  padding-bottom: 30px !important;
   max-width: 900px;
 }
 
