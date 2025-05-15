@@ -878,8 +878,7 @@ section {
 }
 
 .swiper-slide {
-  width: 110px;
-  height: 110px;
+  padding: 50px 0;
   border-radius: 12px;
   background: white;
   display: flex;
