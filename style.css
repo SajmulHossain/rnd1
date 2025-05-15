@@ -528,6 +528,11 @@ header.scrolled nav ul li a:hover::after {
   height: auto;
 }
 
+.section-2-img {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
 .dril-2 h2 {
   font-family: var(--heading-font);
   font-size: 2rem;
