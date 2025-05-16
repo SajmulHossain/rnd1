@@ -409,7 +409,6 @@ header.scrolled nav ul li a:hover::after {
   font-family: var(--body-font);
   font-weight: 700;
   font-size: 2.5rem;
-  /* margin-bottom: 15px; */
   color: transparent;
   -webkit-text-stroke: 1px var(--secondary-color);
   border-right: 2px solid transparent;
@@ -998,8 +997,8 @@ section {
   }
 
   .swiper-slide img {
-    width: 48px;
-    height: 48px;
+    width: 80px;
+    height: 80px;
   }
 
   .swiper-slide-active,
