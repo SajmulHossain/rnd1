@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initialize ScrollOut with optimized settings
   ScrollOut({
-    targets: ".dril-2, .dril-section-2, .client-animation",
+    targets: ".dril-2, .dril-section-2",
   });
 
   // Initialize Swiper with optimized settings
