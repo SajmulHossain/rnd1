@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Initialize Swiper with optimized settings
-  const swiper = new Swiper(".swiper", {
+  const swiper = new Swiper(".swiper-1", {
     slidesPerView: 5,
     spaceBetween: 30,
     centeredSlides: true,
@@ -48,6 +48,21 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       resize: function () {
         updateCenteredSlide();
+      },
+    },
+  });
+
+  const swiper1 = new Swiper(".diamondSwiper", {
+    slidesPerView: 3, // Force 3 slides per view for testing
+    spaceBetween: 30,
+    loop: true,
+    grabCursor: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
       },
     },
   });

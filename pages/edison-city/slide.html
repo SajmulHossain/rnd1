@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>স্লাইডার রাস্তা</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+
+      .city-section-3 {
+        position: relative;
+        min-height: 100vh;
+        overflow: hidden;
+        background-color: #fff;
+      }
+
+      .road-bg {
+        width: 100%;
+        display: block;
+      }
+
+      .header-wrapper {
+        position: relative;
+      }
+
+      .section-title {
+        position: absolute;
+        bottom: 20px;
+        left: 50px;
+        font-size: 48px;
+        font-weight: bold;
+        line-height: 60px;
+        color: black;
+      }
+
+      .green-title {
+        color: green;
+        display: flex;
+        align-items: flex-end;
+      }
+
+      .leaf-icon {
+        height: 70px;
+        margin-left: 10px;
+      }
+
+      .main-number {
+        color: orange;
+        font-size: 100px;
+        text-shadow: -3px 0px 2px rgb(147, 51, 16);
+        vertical-align: sub;
+      }
+
+      .swiper {
+        width: 100%;
+        padding: 50px 30px;
+        box-sizing: border-box;
+        position: absolute;
+        bottom: 150px;
+        z-index: 10;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+      }
+
+      .swiper-slide img {
+        width: 100%;
+        max-width: 320px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        margin: auto;
+      }
+
+      .road-base {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index: 1;
+      }
+
+      .road-base .layer {
+        width: 100%;
+      }
+
+      .road-base .black {
+        height: 50px;
+        background-color: black;
+      }
+
+      .road-base .gray {
+        height: 30px;
+        background-color: rgb(83, 80, 80);
+      }
+
+      .card-with-wheels {
+        position: relative;
+        display: inline-block;
+        padding-bottom: 60px; /* Space for wheels */
+      }
+
+      .card-with-wheels img {
+        width: 100%;
+        max-width: 320px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .wheels {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 25px;
+      }
+
+      .wheel {
+        width: 60px;
+        height: 60px;
+        animation: spin 2s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Adjust swiper-slide */
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: auto;
+      }
+
+      .swiper {
+        position: absolute;
+        bottom: 160px; /* রোড থেকে কার্ড একটু ওপরে রাখো */
+        width: 100%;
+        z-index: 10;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="city-section-3">
+      <div class="header-wrapper">
+        <img src="assets/Road-01.png" class="road-bg" />
+        <h3 class="section-title">
+          <span class="green-title">
+            নঈা সিটিতে
+            <img src="assets/leaves.png" class="leaf-icon" />
+          </span>
+          <br />
+          <span>
+            যোগাযোগের
+            <span class="main-number">১০</span> রাস্তা
+          </span>
+        </h3>
+      </div>
+
+      <!-- Swiper Slider -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="card-with-wheels">
+              <img src="assets/Road box/Artboard 2@4x.png" alt="1" />
+              <div class="wheels">
+                <img src="assets/wheel.png" class="wheel left-wheel" />
+                <img src="assets/wheel.png" class="wheel right-wheel" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Repeat for 10 slides -->
+          <div class="swiper-slide">
+            <img src="assets/Road box/Artboard 2@4x.png" alt="1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/Road box/Artboard 2 copy@4x.png" alt="2" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/Road box/Artboard 2 copy 2@4x.png" alt="3" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/Road box/Artboard 2 copy 3@4x.png" alt="4" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/Road box/Artboard 2 copy 4@4x.png" alt="5" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/Road box/Artboard 2 copy 5@4x.png" alt="6" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/Road box/Artboard 2 copy 6@4x.png" alt="7" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/Road box/Artboard 2 copy 7@4x.png" alt="8" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/Road box/Artboard 2 copy 8@4x.png" alt="9" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/Road box/Artboard 2 copy 9@4x.png" alt="10" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Road base -->
+      <div class="road-base">
+        <div class="layer black"></div>
+        <div class="layer gray"></div>
+        <div class="layer black"></div>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+          },
+          480: {
+            slidesPerView: 1,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

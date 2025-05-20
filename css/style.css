@@ -928,7 +928,7 @@ section {
   pointer-events: none;
 }
 
-.swiper::before {
+/* .swiper::before {
   left: 0;
   background: linear-gradient(to right, #fff 0%, transparent 100%);
 }
@@ -936,7 +936,7 @@ section {
 .swiper::after {
   right: 0;
   background: linear-gradient(to left, #fff 0%, transparent 100%);
-}
+} */
 
 .swiper-slide {
   padding: 20px 0;
@@ -1217,26 +1217,278 @@ footer {
 
 .city-section-2 {
   height: 100vh;
-  background: url('../assets/drel.png') no-repeat center;
+  background: url("../assets/drel.png") no-repeat center;
   background-size: cover;
   position: relative;
 }
 
-.city-section-2 div {
+.city-section-2 div,
+.city-section-4 div {
   background-color: rgba(0, 0, 0, 0.589);
   color: white;
   position: absolute;
   bottom: 30px;
-  right: 0;
   width: 45%;
   padding: 20px;
 }
 
-.city-section-2 div p {
+.city-section-2 div {
+  right: 0;
+}
+
+.city-section-4 div {
+  left: 0;
+}
+
+.city-section-2 div p,
+.city-section-4 div p {
   font-size: 13px;
   text-align: justify;
 }
 
 .city-section-3 {
   position: relative;
+  min-height: 100vh;
+}
+
+.card-container {
+  display: flex;
+  position: absolute;
+  bottom: 10%;
+  z-index: 10;
+  justify-content: space-between;
+  gap: 50px;
+  border: none;
+}
+
+.card-container .card {
+  position: relative;
+  width: 30vw;
+}
+
+.card-container .card img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.wheel {
+  position: absolute;
+  width: 100%;
+  top: 85%;
+  left: 0;
+  border: 2px solid black;
+}
+
+.wheel img {
+  width: 100px;
+  height: 100px;
+}
+
+.city-section-4 {
+  background: url("../assets/section-two-img.png") center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+/* Styling for city-section-5 (Amenities & Facilities) */
+.city-section-5 {
+  padding: 30px 0 0;
+  border-bottom: 4px solid var(--main-color);
+  font-family: var(--body-font);
+}
+
+.city-section-5 h2 {
+  font-family: var(--heading-font);
+  font-size: 2.8rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.city-section-5 h2 img {
+  height: 40px;
+}
+
+.amenities-green-section {
+  padding: 40px 0;
+}
+
+.dark-green {
+  background-color: #003b13;
+}
+
+.light-green {
+  background-color: #24a44f;
+}
+
+.amenities-row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.amenity-circle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 140px;
+  text-align: center;
+}
+
+.amenity-circle {
+  width: 100px;
+  height: 100px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: transparent;
+  margin-bottom: 10px;
+}
+
+.amenity-circle-container p {
+  color: white;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 500;
+  margin: 0;
+}
+
+.facilities-grey-section {
+  padding: 40px 0;
+}
+
+.facilities-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.facilities-row:nth-child(1) {
+  margin-bottom: 12px;
+}
+
+.facility-box {
+  background-color: #e0e0e0;
+  padding: 15px 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1 1 200px;
+  max-width: 220px;
+  text-align: center;
+  text-wrap: nowrap;
+}
+
+.facility-box p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .amenities-row {
+    gap: 20px;
+  }
+
+  .facility-box {
+    flex: 1 1 45%;
+    max-width: none;
+  }
+}
+/* Section styling */
+.diamond-features {
+  padding: 40px 0;
+  background-color: #ffffff;
+  font-family: var(--body-font);
+}
+/* Header styling */
+.features-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.features-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  font-family: var(--heading-font);
+}
+
+.diamond-icon {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* Swiper container - Adjust padding if needed for navigation outside */
+.diamondSwiper {
+    padding-bottom: 40px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Swiper slide/feature card layout */
+.diamondSwiper .feature-card {
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  background: #f9f9f9;
+  border-bottom: 5px solid #da5326;
+  height: auto;
+  border-radius: 8px;
+  overflow: hidden;
+  width: calc((100% - 60px) / 3);
+  box-sizing: border-box;
+  padding: 0;
+  box-shadow: none;
+}
+
+/* Title bar */
+.feature-title {
+  background-color: #e0e0e0;
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+  font-family: var(--heading-font);
+}
+
+/* Image area */
+.feature-image {
+    padding: 15px;
+    background-color: #ffffff;
+}
+
+.feature-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border: 1px solid #ccc;
+}
+
+/* Description */
+.feature-desc {
+  background-color: #005800;
+  color: #fff;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: left;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
