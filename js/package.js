@@ -53,10 +53,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const swiper1 = new Swiper(".diamondSwiper", {
-    slidesPerView: 3, // Force 3 slides per view for testing
     spaceBetween: 30,
     loop: true,
     grabCursor: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     breakpoints: {
       768: {
         slidesPerView: 2,
@@ -69,10 +72,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function updateCenteredSlide() {
     requestAnimationFrame(() => {
-      document.querySelectorAll(".swiper-slide").forEach((slide) => {
+      document.querySelectorAll(".swiper-1 .swiper-slide").forEach((slide) => {
         slide.classList.remove("centered");
       });
-      const activeSlides = document.querySelectorAll(".swiper-slide-visible");
+      const activeSlides = document.querySelectorAll(".swiper-1 .swiper-slide-visible");
       const middleIndex = Math.floor(activeSlides.length / 2);
       if (activeSlides[middleIndex]) {
         activeSlides[middleIndex].classList.add("centered");

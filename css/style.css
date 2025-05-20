@@ -1410,7 +1410,7 @@ footer {
   font-family: var(--body-font);
 }
 /* Header styling */
-.features-header {
+.features-header, .city-section-7 > h2 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1485,4 +1485,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.city-section-7 > h2 span img {
+  width: 100px;
 }
