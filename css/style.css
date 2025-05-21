@@ -1410,7 +1410,8 @@ footer {
   font-family: var(--body-font);
 }
 /* Header styling */
-.features-header, .city-section-7 > h2 {
+.features-header,
+.city-section-7 > h2 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1432,9 +1433,9 @@ footer {
 
 /* Swiper container - Adjust padding if needed for navigation outside */
 .diamondSwiper {
-    padding-bottom: 40px;
-    width: 100%;
-    margin: 0 auto;
+  padding-bottom: 40px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 /* Swiper slide/feature card layout */
@@ -1465,7 +1466,6 @@ footer {
   font-family: var(--heading-font);
 }
 
-
 .feature-image img {
   width: 100%;
   height: auto;
@@ -1478,7 +1478,7 @@ footer {
   background-color: rgb(6, 78, 6);
   color: #fff;
   padding: 10px;
-  font-size:20px;
+  font-size: 20px;
   line-height: 1.6;
   text-align: left;
   flex-grow: 1;
@@ -1489,4 +1489,101 @@ footer {
 
 .city-section-7 > h2 span img {
   width: 100px;
+}
+.city-section-7 > h2 {
+  font-weight: bold;
+}
+
+.membership,
+.city-section-10 {
+  background-color: #eeeeef;
+}
+
+.membership .container h2 span img,
+.city-section-9 .container h2 span img,
+.city-section-10 .container h2 span img {
+  width: 100px;
+}
+.membership .container h2,
+.city-section-10 .container h2,
+.city-section-9 .container h2 {
+  font-weight: bold;
+  text-align: center;
+}
+
+.plot-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plot-container div {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.plot-text {
+  position: absolute;
+  bottom: 70px;
+  color: white;
+  font-weight: bold;
+}
+
+.plot-container div img {
+  width: 80%;
+}
+
+.road-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.road-header div {
+  display: flex;
+  gap: 20px;
+}
+
+.road-header div button {
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 8px 36px;
+}
+
+.road-header div button:nth-child(1) {
+  background-color: #03852c;
+}
+
+.road-header div button:nth-child(2) {
+  background-color: #24a44f;
+}
+
+.road-container {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.road-container div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.road-container div div {
+  border: 1px solid black;
+  border-radius: 100%;
+}
+
+.road-container div div img {
+  height: 200px;
+  width: 200px;
+}
+
+.road-container div h3 span {
+  font-size: 60px;
 }
