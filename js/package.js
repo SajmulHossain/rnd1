@@ -52,24 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  const swiper1 = new Swiper(".diamondSwiper", {
-    spaceBetween: 30,
-    loop: true,
-    grabCursor: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
-    },
-  });
-
   function updateCenteredSlide() {
     requestAnimationFrame(() => {
       document.querySelectorAll(".swiper-1 .swiper-slide").forEach((slide) => {
