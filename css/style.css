@@ -1501,12 +1501,14 @@ footer {
 
 .membership .container h2 span img,
 .city-section-9 .container h2 span img,
-.city-section-10 .container h2 span img {
+.city-section-10 .container h2 span img,
+.distance-title span img {
   width: 100px;
 }
 .membership .container h2,
 .city-section-10 .container h2,
-.city-section-9 .container h2 {
+.city-section-9 .container h2,
+.distance-title {
   font-weight: bold;
   text-align: center;
 }
@@ -1586,4 +1588,142 @@ footer {
 
 .road-container div h3 span {
   font-size: 60px;
+}
+
+/* Add styles for the Distance section */
+.distance-section {
+  padding: 0 0 40px;
+    text-align: center;
+}
+
+.distance-title {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.distance-title img {
+  width: 40px;
+  height: 40px;
+}
+
+.distance-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.distance-image-container {
+  position: relative;
+    border-radius: 20px;
+    width: 280px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.distance-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.distance-image-container .text-block {
+    position: absolute;
+    background-color: #004d00; /* Dark Green */
+    color: white;
+    padding: 5px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    z-index: 100;
+}
+
+.distance-text-blocks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.distance-text-blocks span {
+  font-size: 20px;
+}
+
+.distance-arrow-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #666; /* Dark Grey */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    gap: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 30%;
+    transform: translate(-50%);
+    margin: 0 auto;
+}
+
+.distance-arrow {
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+}
+
+.distance-arrow:first-child {
+    border-right: 20px solid white;
+}
+
+.distance-arrow:last-child {
+    border-left: 20px solid white;
+}
+
+.scroll-indicator {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .distance-image-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .distance-image-container .text-block,
+    .distance-text-blocks span {
+        font-size: 16px;
+    }
+
+    .distance-km {
+        font-size: 20px;
+    }
+
+    .distance-arrow {
+        border-top-width: 10px;
+        border-bottom-width: 10px;
+    }
+    
+    .distance-arrow:first-child {
+        border-right-width: 15px;
+    }
+
+    .distance-arrow:last-child {
+        border-left-width: 15px;
+    }
 }
